@@ -1,0 +1,14 @@
+# 白名单模式: 只保留核心文件, 其余一律忽略
+*
+
+# ---- 核心文件 ----
+!.gitignore
+!README.md
+!cfz_mod.cs
+!build_mod.ps1
+!startup.cs
+
+# ---- 例外说明 (一律忽略) ----
+# publish/     发布产物
+# Config.ini   含个人游戏配置
+# *.ps1(其余)  开发期一次性调试脚本, 含本机硬编码路径
