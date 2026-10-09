@@ -28,9 +28,7 @@ CrossFire Zero（穿越火线 Xenogenesis / CFZ）离线单机 Mod。
 ## 环境要求
 
 - CrossFire Zero 客户端（`CFWClient.exe`，本 Mod 基于当前客户端反编译开发）
-- [MelonLoader](https://github.com/LavaGang/MelonLoader)（游戏目录下已有 `MelonLoader\`）
 - [UnityExplorer](https://github.com/sinai-dev/UnityExplorer)（sinai-dev 版，`Mods\UnityExplorer.ML.Mono.dll`）——作为脚本宿主加载本 Mod
-- Windows + .NET Framework 4.x（编译用系统自带 csc）
 
 ## 安装
 
@@ -38,8 +36,7 @@ CrossFire Zero（穿越火线 Xenogenesis / CFZ）离线单机 Mod。
 
 ```
 <游戏根目录>\
-  MelonLoader\            ← MelonLoader
-  CFWClient_Data\Managed\ ← 游戏程序集 (编译时引用)
+ 
   Mods\
     UnityExplorer.ML.Mono.dll                  ← UnityExplorer
     sinai-dev-UnityExplorer\Scripts\startup.cs ← 加载脚本 (见下)
@@ -98,11 +95,6 @@ UnityExplorer 编译执行 `startup.cs` → `Assembly.LoadFrom` 加载 dll → `
 - **Harmony 补丁**：游戏事件观察、换背包离线回环、复活事件改写（保持背包）、UI 修复等
 - **Driver（MonoBehaviour）**：每帧驱动——键位旁路（WASD/开火）、看门狗（卡加载/掉图/相机/声音）、模式界面按钮接管
 
-## 已知限制
-
-- 仅针对教学模式 AI 图；其他模式（真实地图 F7 / 单机教学 F8）为 Debug 调试入口，未经完整适配
-- 游戏版本更新可能导致反编译结构变化，需要对照新程序集调整
-- 巡逻兜底 / 可见性矩阵兜底 / 移动兜底等默认停用（历史上与其他系统打架，如需要见源码内注释恢复）
 
 ## 免责声明
 
